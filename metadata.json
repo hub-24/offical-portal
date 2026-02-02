@@ -1,0 +1,8 @@
+{
+  "name": "HUB-24 | Official eldoctooor.ae Portal",
+  "description": "The unified growth ecosystem for Knowledge, Earning, Business, and Impact by eldoctooor.ae.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
