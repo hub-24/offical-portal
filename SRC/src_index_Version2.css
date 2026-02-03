@@ -1,0 +1,45 @@
+:root{
+  --bg: #020617;
+  --panel: #0b0f1a;
+  --text: #e6eef8;
+  --muted: #9aa3b2;
+  --accent: #0b63ff; /* default blue */
+  --accent-2: #ffc300; /* accent alt */
+}
+
+/* Themeable body using data-theme attributes (dark/light) */
+html[data-theme='dark'] {
+  --bg: #020617;
+  --panel: #0b0f1a;
+  --text: #e6eef8;
+}
+html[data-theme='light'] {
+  --bg: #f7fafc;
+  --panel: #ffffff;
+  --text: #0b1720;
+}
+
+/* Accent swap via data-accent */
+html[data-accent='blue'] { --accent: #0b63ff; }
+html[data-accent='orange'] { --accent: #ff8a00; }
+html[data-accent='yellow'] { --accent: #ffc300; }
+html[data-accent='red'] { --accent: #d7263d; }
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* utility classes used by components */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.btn { padding: 10px 16px; border-radius: 10px; background: var(--accent); color: white; text-decoration: none; display: inline-block; }
+.small-muted { color: var(--muted); font-size: 12px; }
+.ad-wrapper { margin: 18px 0; border-radius: 12px; overflow: hidden; }
+
+/* responsive */
+@media (max-width: 768px) { .container { padding: 0 12px; } }
